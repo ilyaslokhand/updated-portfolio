@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+:root {
+  --bg:      #f8f9fa;
+  --surface: #ffffff;
+  --text:    #212529;
+  --muted:   #6c757d;
+  --accent:  #20c997;
+  --border:  #dee2e6;
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  --bg:      #08090b;
+  --surface: #14171c;
+  --text:    #e8eaed;
+  --muted:   #9aa1ab;
+  --accent:  #20c997;
+  --border:  #2b3138;
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-bg:      var(--bg);
+  --color-surface: var(--surface);
+  --color-text:    var(--text);
+  --color-muted:   var(--muted);
+  --color-accent:  var(--accent);
+  --color-border:  var(--border);
+  --font-display:  "Kodchasan", sans-serif;
+}
+
+@theme {
+  --breakpoint-desk: 1200px;
+  --breakpoint-nav: 880px;
+  --breakpoint-xs: 430px;
+}
+body {
+  font-family: var(--font-display);
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
