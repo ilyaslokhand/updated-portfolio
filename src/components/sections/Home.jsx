@@ -21,7 +21,7 @@ export default function Home({ onNavigate }) {
 <div className="mt-6 flex flex-col xs:flex-row  xs:items-end justify-between gap-6 lg:mt-auto items-center">
 
   <a
-    href="/cv.pdf"
+    href="https://www.linkedin.com/in/ilyas-lokhand/"
     download
     className="inline-flex items-center gap-2 rounded-xl bg-accent px-6 py-4 font-semibold text-black hover:brightness-110 transition"
   >

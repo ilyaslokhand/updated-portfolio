@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Mail, MapPin, Send } from 'lucide-react';
+import { Mail, MapPin, Send, Phone } from 'lucide-react';
 import { SITE } from '../../data/site';
 import Badge from '../ui/Badge';
 
@@ -64,6 +64,20 @@ export default function Contact() {
               <p className="text-sm text-muted">Email</p>
               <p className="font-medium group-hover:text-accent transition-colors">
                 ilokhandwala98@gmail.com
+              </p>
+            </div>
+          </a>
+
+          <a href="tel:+919664202575"
+            className="flex items-center gap-4 group"
+          >
+            <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent shrink-0">
+              <Phone size={22} />
+            </span>
+            <div>
+              <p className="text-sm text-muted">Phone</p>
+              <p className="font-medium group-hover:text-accent transition-colors">
+                +91 96642 02575
               </p>
             </div>
           </a>

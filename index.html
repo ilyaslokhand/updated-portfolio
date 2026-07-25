@@ -2,10 +2,31 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link href="https://fonts.googleapis.com/css2?family=Kodchasan:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>portfolio</title>
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+
+    <title>Ilyas Lokhand — Full Stack & No-Code Web Developer</title>
+    <meta
+      name="description"
+      content="Ilyas Lokhand is a full-stack and no-code web developer building fast, reliable websites and web apps with React, Next.js, WordPress, Webflow and Shopify. Based in Surat, India — available for freelance projects worldwide."
+    />
+    <meta
+      name="keywords"
+      content="Ilyas Lokhand, full stack developer, no-code developer, React developer, Next.js developer, WordPress developer, Webflow, Shopify, freelance web developer, Surat"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kodchasan:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      const t =
+        localStorage.getItem('theme') ||
+        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.dataset.theme = t;
+    </script>
   </head>
   <body>
     <div id="root"></div>
