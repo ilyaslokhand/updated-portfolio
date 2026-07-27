@@ -16,7 +16,7 @@ export default function Portfolio() {
       </p>
 
       {/* Grid */}
-      <div className="mt-10 grid grid-cols-1 xs:grid-cols-2 gap-5">
+      <div className="mt-10 grid grid-cols-1 grid:grid-cols-2 gap-5">
         {PROJECTS.map((project) => (
           <a
             key={project.title}

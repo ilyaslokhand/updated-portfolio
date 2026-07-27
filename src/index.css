@@ -33,9 +33,10 @@
 }
 
 @theme {
-  --breakpoint-desk: 1200px;
+  --breakpoint-xs: 400px;
+  --breakpoint-grid: 700px;
   --breakpoint-nav: 880px;
-  --breakpoint-xs: 430px;
+  --breakpoint-desk: 1200px;
 }
 body {
   font-family: var(--font-display);

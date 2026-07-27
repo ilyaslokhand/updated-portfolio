@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useTheme } from './hooks/useTheme';
 import IconNav from './components/layout/IconNav';
@@ -9,10 +9,12 @@ import { SECTIONS } from './components/sections';
 export default function App() {
   const { theme, toggleTheme } = useTheme();
   const [active, setActive] = useState('home');
+  const mainRef = useRef(null);
 
-  // Scroll to top whenever the section changes (mobile page scroll)
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (mainRef.current) {
+      mainRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   }, [active]);
 
   const Section = SECTIONS[active];
@@ -25,9 +27,10 @@ export default function App() {
       <div className="desk:min-h-screen flex items-center justify-center px-4 py-8 pb-28 nav:pb-8 desk:pl-28 desk:pr-8">
         <div className="w-full max-w-[500px] desk:max-w-[1360px] flex flex-col desk:flex-row items-center">
 
-          <ProfileCard onNavigate={setActive}/>
+          <ProfileCard onNavigate={setActive} />
 
           <main
+            ref={mainRef}
             className="
               relative z-10 w-full desk:flex-1
               bg-surface rounded-[40px] shadow-lg
@@ -35,6 +38,7 @@ export default function App() {
               px-6 py-10
               desk:pl-36 desk:pr-14 desk:py-14
               desk:h-[688px] desk:overflow-y-auto
+              scroll-mt-4
             "
           >
             <AnimatePresence mode="wait">
