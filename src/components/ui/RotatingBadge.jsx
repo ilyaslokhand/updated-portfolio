@@ -5,7 +5,7 @@ export default function RotatingBadge({ onClick }) {
   return (
     <button
       onClick={onClick}
-      className="relative h-40 w-40 flex items-center justify-center group"
+      className="relative h-40 w-40 flex items-center justify-center group cursor-pointer"
     >
       {/* Rotating text ring */}
       <motion.svg

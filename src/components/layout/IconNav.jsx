@@ -30,7 +30,7 @@ function DesktopNav({ active, onNavigate }) {
               onClick={() => onNavigate(item.id)}
               whileHover={{ scale: 1.15 }}
               whileTap={{ scale: 0.9 }}
-              className={`relative flex h-11 w-11 items-center justify-center rounded-full border-2 transition-colors
+              className={`relative flex h-11 w-11 items-center justify-center rounded-full cursor-pointer border-2 transition-colors
                 ${isActive
                   ? 'border-accent text-accent'
                   : 'border-transparent text-muted hover:border-accent hover:text-accent'
@@ -71,7 +71,8 @@ function DesktopNav({ active, onNavigate }) {
 
 function MobileNav({ active, onNavigate }) {
   return (
-<nav className="fixed bottom-0 left-0 right-0 nav:hidden z-30 bg-surface/90 backdrop-blur-xl border-t border-border shadow-2xl">  <div className="flex overflow-x-auto gap-1 px-4 py-3 scrollbar-hide">
+    <nav className="fixed bottom-0 left-0 right-0 nav:hidden z-30 bg-surface/90 backdrop-blur-xl border-t border-border shadow-2xl">
+      <div className="flex overflow-x-auto gap-1 px-4 py-3 scrollbar-hide">
         {NAV.map((item) => {
           const Icon = item.icon;
           const isActive = active === item.id;
@@ -85,19 +86,26 @@ function MobileNav({ active, onNavigate }) {
             >
               {/* Active background pill */}
               {isActive && (
-  <motion.div
-    layoutId="activePillMobile"
-    className="absolute top-1 left-1/2 -translate-x-1/2 h-10 w-10 rounded-full bg-accent/15"
-    transition={{ type: 'spring', stiffness: 350, damping: 30 }}
-  />
-)}
+                <motion.div
+                  layoutId="activePillMobile"
+                  className="absolute top-1 left-1/2 -translate-x-1/2 h-10 w-10 rounded-full bg-accent/15"
+                  transition={{ type: 'spring', stiffness: 350, damping: 30 }}
+                />
+              )}
 
-              <Icon
-                size={22}
-                className={`relative z-10 transition-colors ${
-                  isActive ? 'text-accent' : 'text-muted'
-                }`}
-              />
+              {/* Icon bounces when it becomes active */}
+              <motion.div
+  key={active}
+  initial={{ opacity: 0, x: 60 }}
+  animate={{ opacity: 1, x: 0 }}
+  exit={{ opacity: 0, x: -60 }}
+  transition={{ duration: 0.35, ease: 'easeInOut' }}
+>
+  <Icon
+    size={22}
+    className={`transition-colors ${isActive ? 'text-accent' : 'text-muted'}`}
+  />
+</motion.div>
 
               {/* Active dot below icon */}
               {isActive && (
@@ -114,7 +122,6 @@ function MobileNav({ active, onNavigate }) {
     </nav>
   );
 }
-
 export default function IconNav({ active, onNavigate }) {
   return (
     <>

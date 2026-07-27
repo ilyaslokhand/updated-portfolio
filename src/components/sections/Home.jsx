@@ -20,13 +20,13 @@ export default function Home({ onNavigate }) {
       {/* Bottom row: CV button + rotating badge */}
 <div className="mt-6 flex flex-col xs:flex-row  xs:items-end justify-between gap-6 lg:mt-auto items-center">
 
-  <a
-    href="https://www.linkedin.com/in/ilyas-lokhand/"
-    download
-    className="inline-flex items-center gap-2 rounded-xl bg-accent px-6 py-4 font-semibold text-black hover:brightness-110 transition"
-  >
-    Download CV
-  </a>
+  <button
+  onClick={() => onNavigate('portfolio')}
+  style={{ cursor: 'pointer' }}
+  className="relative z-40 inline-flex items-center gap-2 rounded-xl bg-accent px-6 py-4 font-semibold text-black hover:brightness-110 transition"
+>
+  View Portfolio
+</button>
 
   <RotatingBadge onClick={() => onNavigate('portfolio')} />
 </div>

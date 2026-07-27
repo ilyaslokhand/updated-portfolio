@@ -7,7 +7,7 @@ export default function ThemeToggle({ theme, toggleTheme }) {
   return (
     <button
       onClick={toggleTheme}
-      className="fixed top-4 right-4 desk:top-6 desk:right-6 z-40 h-12 w-12 rounded-full bg-surface/80 backdrop-blur-md border border-border shadow-lg flex items-center justify-center overflow-hidden"
+      className="fixed top-4 right-4 cursor-pointer desk:top-6 desk:right-6 z-40 h-12 w-12 rounded-full bg-surface/80 backdrop-blur-md border border-border shadow-lg flex items-center justify-center overflow-hidden"
     >
       {/* Spinning ring around the button */}
       <motion.div

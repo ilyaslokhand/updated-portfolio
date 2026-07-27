@@ -25,7 +25,7 @@ export default function App() {
       <div className="desk:min-h-screen flex items-center justify-center px-4 py-8 pb-28 nav:pb-8 desk:pl-28 desk:pr-8">
         <div className="w-full max-w-[500px] desk:max-w-[1360px] flex flex-col desk:flex-row items-center">
 
-          <ProfileCard />
+          <ProfileCard onNavigate={setActive}/>
 
           <main
             className="

@@ -1,4 +1,4 @@
-export default function ProfileCard() {
+export default function ProfileCard({onNavigate}) {
   return (
     <div className="relative w-full max-w-[400px] desk:max-w-[480px] shrink-0 p-3 desk:p-5">
 
@@ -24,14 +24,12 @@ export default function ProfileCard() {
           <p className="mt-1 text-sm desk:text-base tracking-[2px] text-gray-300">
             FULL STACK DEVELOPER
           </p>
-          <a
-            href="https://www.linkedin.com/in/ilyas-lokhand/"
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            onClick={() => onNavigate('portfolio')}
             className="mt-4 block w-full rounded-full bg-accent py-3 desk:py-4 text-center text-base desk:text-lg font-semibold text-black hover:brightness-110 transition"
           >
-            @ Hire Me
-          </a>
+            View Portfolio
+          </button>
         </div>
       </div>
     </div>
