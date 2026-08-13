@@ -98,4 +98,13 @@ export const TESTIMONIALS = [
     quote:
       "Our patients need to feel heard, and Ilyas built a site that communicates exactly that — calm, credible, and clear. Fast, polished, and thoughtfully done. He made the whole process easy.",
   },
+  {
+    name: 'Bob',
+    role: 'Bob\'s Mode',
+    website: 'https://bobsmode.com/',
+    image: '/bobsimage.png',
+    rating: 5,
+    quote:
+      "Ilyas turned our Figma into a fully working WooCommerce store shop, filters, cart, checkout, and account pages all built exactly to design. He handled every detail, from the product cards to the mobile experience, and made a complex build feel effortless.",
+  },
 ];
