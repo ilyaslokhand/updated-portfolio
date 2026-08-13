@@ -104,7 +104,7 @@ export const PROJECTS = [
   {
     title: 'bobsmode',
     subtitle: 'Ecommerce Footwear Store',
-    image: '/bobsmode.png',
+    image: '/bobs.png',
     url: 'https://bobsmode.com/',
   },
 ];

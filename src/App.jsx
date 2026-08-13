@@ -10,8 +10,14 @@ export default function App() {
   const { theme, toggleTheme } = useTheme();
   const [active, setActive] = useState('home');
   const mainRef = useRef(null);
+  const isFirstLoad = useRef(true);
 
-  useEffect(() => {
+   useEffect(() => {
+    // Skip scrolling on the very first render — let the hero show
+    if (isFirstLoad.current) {
+      isFirstLoad.current = false;
+      return;
+    }
     if (mainRef.current) {
       mainRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
