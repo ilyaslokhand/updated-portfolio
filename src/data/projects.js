@@ -101,4 +101,10 @@ export const PROJECTS = [
     image: '/strome.png',
     url: 'https://stormport.services/',
   },
+  {
+    title: 'bobsmode',
+    subtitle: 'Ecommerce Footwear Store',
+    image: '/bobsmode.png',
+    url: 'https://bobsmode.com/',
+  },
 ];
