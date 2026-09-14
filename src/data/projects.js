@@ -6,6 +6,13 @@ export const PROJECTS = [
     image: '/solin.webp',
     url: 'https://solion.ch/',
   },
+
+  {
+    title: 'Bethal',
+    subtitle: 'Church Modern Website',
+    image: '/BETHEL.webp',
+    url: 'https://bethel-church-website-xi.vercel.app/',
+  },
   
 
   {
