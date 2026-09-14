@@ -107,4 +107,14 @@ export const TESTIMONIALS = [
     quote:
       "Ilyas turned our Figma into a fully working WooCommerce store shop, filters, cart, checkout, and account pages all built exactly to design. He handled every detail, from the product cards to the mobile experience, and made a complex build feel effortless.",
   },
+
+    {
+    name: 'Bethel',
+    role: 'Hopewell VA Churuch',
+    website: 'https://bethel-church-website-xi.vercel.app/',
+    image: '/beth.png',
+    rating: 5,
+    quote:
+    "Ilyas turned our church website into a welcoming, easy-to-use space that reflects who we are. Visitors can now find service times, learn about our ministries, and get in touch with ease."
+  },
 ];
