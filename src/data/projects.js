@@ -13,6 +13,13 @@ export const PROJECTS = [
     image: '/BETHEL.webp',
     url: 'https://bethel-church-website-xi.vercel.app/',
   },
+
+  {
+    title: 'Upcoming Offer',
+    subtitle: 'Deel Feed Website',
+    image: '/offer.png',
+    url: 'https://upcomingoffer.com/',
+  },
   
 
   {
