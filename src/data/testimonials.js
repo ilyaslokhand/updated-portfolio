@@ -117,4 +117,16 @@ export const TESTIMONIALS = [
     quote:
     "Ilyas turned our church website into a welcoming, easy-to-use space that reflects who we are. Visitors can now find service times, learn about our ministries, and get in touch with ease."
   },
+
+  
+{
+  name: 'Dough Adventures',
+  role: 'Healthy Food & E-commerce Brand',
+  website: 'https://doughadventures.in/',
+  image: '/manasi.png',
+  rating: 5,
+  quote:
+    "Ilyas helped transform our online store into a clean, user-friendly shopping experience. From product pages to mobile responsiveness and checkout improvements, everything feels more polished and easier for customers to navigate."
+},
+
 ];

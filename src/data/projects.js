@@ -35,6 +35,13 @@ export const PROJECTS = [
     url: 'https://exteriorhomedesign.ca/',
   },
 
+   {
+    title: 'Dough Adventures',
+    subtitle: 'Millet Foods Ecommerce',
+    image: '/dough.jpeg',
+    url: 'https://doughadventures.in/',
+  },
+
   {
     title: 'Cottage Home Kits',
     subtitle: 'Affordable Housing',
