@@ -11,7 +11,7 @@ export const PROJECTS = [
     title: 'Bethal',
     subtitle: 'Church Modern Website',
     image: '/BETHEL.webp',
-    url: 'https://bethel-church-website-xi.vercel.app/',
+    url: 'https://bethelrva.com/',
   },
 
   {
